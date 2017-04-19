@@ -29,3 +29,24 @@ Run `ng github-pages:deploy` to deploy to GitHub Pages.
 ## Further help
 
 To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+# 文件结构
+- e2e 端到端测试
+- app 根组件
+  - HTML 模板
+  - 样式表
+  - 组件文件
+  - 单元测试文件
+- assets 静态文件目录 
+- environments 环境变量配置
+- polyfills.ts ECMA6兼容处理
+- test.ts 单元测试
+- .editorconfig 编辑器配置文件
+  - http://editorconfig.org
+- karma.conf.js KarMa单元测试配置文件
+  - ng test
+- protractor.conf.js 端到端测试配置文件
+  - ng e2e
+- tslint.json 配置文件
+  - ng lint

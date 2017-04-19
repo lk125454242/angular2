@@ -1,0 +1,25 @@
+<div>
+  <h1>
+    {{ title }}
+  </h1>
+  <p>
+    {{ describe }}
+  </p>
+  <ul *ngIf="position.length">
+    <li *ngFor="let seat of position">
+      {{ seat }}
+    </li>
+  </ul>
+  <button (click)="onAppend()">添加</button>
+  <input (keyup)="onkeydown($event)" type="text" placeholder="请输入新的title">
+  <hr />
+  <!-- 绑定的另一种写法 -->
+  <pre>
+    &lt;input #box (keyup)="'这里的值不重要'" placeholder=""&gt;
+    &lt;p&gt;{{ '&#123;' + '&#123; box.value &#125;' + '&#125;' }}&lt;/p&gt;
+  </pre>
+  <input #box1 (keyup)="'这里的值不重要'" placeholder="#box">
+  <p>{{box1.value}}</p>
+  <!-- 绑定传参的写法 -->
+  <input #box2 (keyup.enter)="onEnter(box2.value)" (blur)="onBlur()" placeholder="keyup.enter">
+</div>
